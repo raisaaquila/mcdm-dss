@@ -29,12 +29,6 @@ def topsis(matrix, weights, bencos, targets=None):
     sepideal = np.linalg.norm(weighted - ideal, axis=1)
     sepnegideal = np.linalg.norm(weighted - negideal, axis=1)
     finalscore = sepnegideal / (sepideal + sepnegideal)
-    print("Normalized matrix:\n", normalized)
-    print("Weighted matrix:\n", weighted)
-    print("Ideal solution:", sepideal)
-    print("Negative ideal solution:", sepnegideal)
-    print("Negative ideal solution:", negideal)
-    print("Final scores:", finalscore)
 
     return finalscore
 
