@@ -185,6 +185,10 @@ if st.button("Compute Final Scores"):
                 st.warning(f"⚠️ {label} (Consider revising this comparison matrix)")
             else:
                 st.success(f"✅ {label}")
+        st.subheader("Scores Visualization")
+        st.bar_chart(results.set_index("Alternative")["Score"])
 
+        best = results.iloc[0]
+        st.markdown(f"### ✅ Best Alternative: **{best['Alternative']}** with score **{best['Score']:.4f}**")
     except Exception as e:
         st.error(f"❌ Error during AHP computation: {e}")
