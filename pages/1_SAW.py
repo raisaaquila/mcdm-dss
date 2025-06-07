@@ -35,8 +35,8 @@ def saw(matrix, weights, types, targets):
     finalscore = np.dot(normalized, weights)
     return finalscore.tolist()
 
-st.set_page_config(page_title="SAW with Match Type", page_icon="📊")
-st.title("Simple Additive Weighing (SAW) with Match Type")
+st.set_page_config(page_title="SAW", page_icon="📊")
+st.title("Simple Additive Weighing (SAW)")
 
 # Input settings
 altamt = st.number_input("Number of Alternatives", min_value=2, max_value=99, value=3)
